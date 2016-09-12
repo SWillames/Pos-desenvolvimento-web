@@ -24,7 +24,8 @@ c1 = 1
 p1 = 0
 print "Primos: ",
 for numero in xrange(2, limite+1):
-    for i in xrange(2,numero):
+    #Melhoria
+    for i in xrange(2,(numero/2)+1):
         if numero % i == 0: break
         c1 += 1
     else:
@@ -32,3 +33,5 @@ for numero in xrange(2, limite+1):
         p1 += 1
 print "\n\nForam encontrados %d números primos." %p1
 print "Foram necessárias %d comparações, %d a menos quando feita com logica usada no while." % (c1, c-c1)
+
+#print "==========EXECUÇÃO AINDA MELHOR============"
