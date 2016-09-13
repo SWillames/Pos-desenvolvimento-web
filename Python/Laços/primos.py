@@ -1,4 +1,5 @@
 #coding: utf-8
+from math import sqrt
 limite = 1000
 numero = 2
 c = 1
@@ -37,12 +38,12 @@ print "\n"
 print "==========EXECUÇÃO AINDA MELHOR============"
 print "Primos: 2",
 
-c2, p2, primos, limite = 1, 1, [2,], 1000
+c2, p2, primos = 1, 1, [2,]
 
 for numero in xrange(3,limite+1,2): #pula de dois em dois
     ehprimo = 1
     for i in primos:
-        c += 1 # mudei de lugar
+        c2 += 1 # mudei de lugar
         if numero % i == 0:
             ehprimo = 0
             break
@@ -51,7 +52,7 @@ for numero in xrange(3,limite+1,2): #pula de dois em dois
     if (ehprimo):
         primos.append(numero)
         print numero,
-        p += 1
+        p2 += 1
 
 print "\n\nForam encontrados %d números primos." %p2
-print "Foram necessárias %d comparações, %d a menos quando feita com logica usada no while." % (c2, c1-c2)
+print "Foram necessárias %d comparações, %d a menos quando feita no primeiro 'for'." % (c2, c1-c2)
